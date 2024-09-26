@@ -13,7 +13,7 @@ article {
   line-height: flex;
   overflow: hidden;
   flex-shrink: 0; /* Prevent shrinking */
-  
+
   & header {
     border-bottom: 1px solid var(--border-color);
     padding: var(--space);
@@ -37,11 +37,11 @@ article {
   }
 
   & footer {
-      display: flex; /* Use Flexbox for horizontal layout */
-      justify-content: center; /* Center the list */
-      align-items: center; /* Center items vertically */
-      border-top: 1px solid var(--border-color); /* Top border for footer */
-      padding: 10px; /* Padding inside the footer */
+    display: flex; /* Use Flexbox for horizontal layout */
+    justify-content: center; /* Center the list */
+    align-items: center; /* Center items vertically */
+    border-top: 1px solid var(--border-color); /* Top border for footer */
+    padding: 10px; /* Padding inside the footer */
     & ul {
       display: flex; /* Flex container for list items */
       gap: 50px; /* Even space between each list item including borders */

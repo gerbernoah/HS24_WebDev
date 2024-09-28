@@ -3,27 +3,27 @@
 }
 
 body {
-  display: grid !important; /* Warum ist diese scheisse so shit */
-  grid-template-columns: 250px 1px 1fr; /* 250px for sidebar, 1px for divider, rest for content */
-  grid-template-rows: auto 1px 1fr 1px auto; /* Header, main content, and footer */
+  display: grid; /* Warum ist diese scheisse so shit */
+  grid-template-columns: 250px 1fr; /* 250px for sidebar, 1px for divider, rest for content */
+  grid-template-rows: auto 1fr auto; /* Header, main content, and footer */
   grid-template-areas: 
-    "sidebar divider header"
-    "sidebar divider chickendinner"
-    "sidebar divider main"
-    "footer footer footer"; /* Define the layout areas */
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  color: black;
-  
+    "sidebar header"
+    "sidebar main"
+    "footer footer"; /* Define the layout areas */
+  background-color: black;
+  height: 100vh;
+  gap: 1px;
 }
 
 body > section {
+  
   grid-area: sidebar; /* Assign to the sidebar area */
   padding: 10px;
+  height: 100%;
   & ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 10px;
     
     & li > a {
@@ -35,28 +35,7 @@ body > section {
       color: black;
     }
   }
-}
-
-body > .divider {
-  grid-area: divider; /* Assign to the divider area */
-  background-color: black; /* Line color */
-  height: 100%; /* Full height of the grid area */
-  width: 1px; /* Width of the divider line */
-  align-self: stretch; /* Ensure it covers the full height */
-  margin: 0; /* Remove any margin */
-  padding: 0; /* Remove any padding */
-}
-
-body > .chickendinner {
-  grid-area: chickendinner; /* Assign to the divider area */
-  background-color: black; /* Line color */
-  height: 1px; /* Full height of the grid area */
-  width: 100%; /* Width of the divider line */
-  align-self: stretch; /* Ensure it covers the full width */
-  justify-self: stretch; /* Ensure it covers the full width */
-  margin: 0; /* Remove any margin */
-  padding: 0; /* Remove any padding */
-  box-sizing: border-box; /* Include padding in the total size */
+  background-color: white;
 }
 
 body > header {
@@ -71,7 +50,9 @@ body > header {
   & span{
     padding: 15px;
   }
+  background-color: white;
 }
+
 
 body > main {
   grid-area: main;
@@ -83,6 +64,7 @@ body > main {
   padding: 15px; /* Padding inside the main container */
   gap: 15px; /* Space between items */
   box-sizing: border-box; /* Include padding in the total size */
+  background-color: white;
 }
 
 /* Assuming the flex items are articles inside main */

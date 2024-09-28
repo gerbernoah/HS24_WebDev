@@ -1,4 +1,4 @@
-body {
+body.card-body {
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space between the items */
   align-items: flex-start; /* Align items at the top */

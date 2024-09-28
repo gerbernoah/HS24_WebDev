@@ -21,7 +21,9 @@ article {
     justify-content: space-between; /* Space between the items */
     align-items: center; /* Center items vertically */
   }
-
+  & header a{
+    text-decoration: none;
+  }
   & main {
     width: inherit;
     height: inherit;

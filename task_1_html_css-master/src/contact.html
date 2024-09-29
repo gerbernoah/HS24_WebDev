@@ -38,23 +38,22 @@
         </li>
       </ul>
     </section>
-
+  <form id="myForm">
     <main class="contact">
-
-        <div class="name"><h4>Name</h4></div>
+        <div class="name" style="color: rgb(45, 135, 238); font-size: large;">Name</div>
         <div class="name1">
           <input type="name" id="name" name="name" placeholder="Jane Doe" style="width: 500px; height: 50px; padding: 10px;">
         </div>
-        <div class="email"><h4>Email address</h4></div>
+        <div class="email" style="color: rgb(45, 135, 238); font-size: large;">Email address</div>
         <div class="email1">
           <input type="email" id="email" name="email" placeholder="jane.doe@example.com" style="width: 500px; height: 50px; padding: 10px;">
         </div>
-        <div class="bd"><h4>Birthday</h4></div>
+        <div class="bd" style="color: rgb(45, 135, 238); font-size: large;">Birthday</div>
         <div class="bd1">
           <input type="date" id="date" name="date" style="width: 500px; height: 50px; padding: 10px;">
         </div>
-        <div class="liking">
-          <h4>What do you like the most?</h4>
+        <div class="liking" style="color: rgb(45, 135, 238); font-size: large;">
+          What do you like the most?
         </div>
           <div class="options">
             <div class="option">
@@ -75,7 +74,7 @@
             </div>
           </div>
         
-        <div class="message"><h4>Your message</h4>
+        <div class="message" style="color: rgb(45, 135, 238); font-size: large;">Your message
         </div>
         <div class="message1">
           <textarea id="message" name="message" placeholder="Enter your message here..." style="width: 500px; height: 200px; padding: 10px;"></textarea>
@@ -86,9 +85,19 @@
           <input type="checkbox" id="html" name="preference" value="html">
           <label for="html">Yes, I want to receive very important spam messages!</label>
         </div>
-
+        <div class="button-group">
+          <button type="button" class="send-button" onclick="sendForm()" style="width: 100px; height: 40px;">Send</button>
+          <button type="reset" class="reset-button" style="width: 100px; height: 40px;">Reset</button>
+      </div>
     </main>
-
+  </form>
+    <script>
+      function sendForm() {
+          // Simulate form submission
+          // Optionally reset the form after submission
+          document.getElementById('myForm').reset();
+      }
+    </script>
     <footer>
       <div>Made with <i class="fa-solid fa-heart"></i> by David Sichau</div>
     </footer>

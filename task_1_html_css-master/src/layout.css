@@ -19,11 +19,11 @@ body > section {
   
   grid-area: sidebar; /* Assign to the sidebar area */
   padding: 10px;
-  height: 100%;
   & ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    align-items: start;
     gap: 10px;
     
     & li > a {
@@ -37,6 +37,23 @@ body > section {
   }
   background-color: white;
 }
+
+@media screen and (max-width: 768px) {
+  /* Make sidebar narrower */
+  body > section {
+    width: 80px; /* Adjust the width of the sidebar */
+  }
+
+  /* Hide the text inside sidebar menu items */
+  body > section ul li a .text {
+    display: none; /* Hide only the text, keep the icons visible */
+  }
+  /* Adjust the grid layout to prevent overlapping */
+  body {
+    grid-template-columns: 80px 1fr; /* Sidebar becomes narrower */
+  }
+}
+
 
 body > header {
   display: flex;
@@ -54,7 +71,7 @@ body > header {
 }
 
 
-body > main {
+body > form main {
   grid-area: main;
   height: calc(100vh - 100px);
   overflow-y: scroll;
@@ -70,18 +87,19 @@ body > main {
 main.contact{
   display: grid; /* Warum ist diese scheisse so shit */
   grid-template-columns: 250px 1fr;
-  grid-template-rows: 50px 50px 50px 150px 200px 100px;
+  grid-template-rows: 50px 50px 50px 150px 200px 20px 1fr;
   grid-template-areas: 
     "name name1"
     "email email1"
     "birthday birthday1"
     "what what1"
     "mess mess1"
-    "question question1"; /* Define the layout areas */
-  
+    "question question1" /* Define the layout areas */
+    "unsend send";
     .name{
       grid-area: name;
-      text-align: start; 
+      text-align: start;
+      padding-left: 25px;
     }
     .name1{
       grid-area: name1;
@@ -90,6 +108,7 @@ main.contact{
     .bd{
       grid-area: birthday;
       text-align: start;
+      padding-left: 25px;
     }
     .bd1{
       grid-area: birthday1;
@@ -98,6 +117,7 @@ main.contact{
     .email{
       grid-area: email;
       text-align: start;
+      padding-left: 25px;
     }
     .email1{
       grid-area: email1;
@@ -106,10 +126,12 @@ main.contact{
     .liking{
       grid-area: what;
       text-align: start;
+      padding-left: 25px;
     }
     .message{
       grid-area: mess;
       text-align: start;
+      padding-left: 25px;
     }
     .message1{
       grid-area: mess1;
@@ -141,6 +163,11 @@ main.contact{
         font-size: 16px; /* Font size for the labels */
         cursor: pointer;
       }
+    }
+
+    .button-group{
+      grid-area: send;
+      align-items: start;
     }
 }
 

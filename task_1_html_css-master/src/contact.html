@@ -23,79 +23,130 @@
         </li>
         <li>
           <a href="/" title="Dashboard"
-            ><i class="fa-solid fa-dashboard"></i> <span class="text">Dashboard</span></a
+            ><i class="fa-solid fa-dashboard"></i>
+            <span class="text">Dashboard</span></a
           >
         </li>
         <li>
           <a href="/" title="Profile"
-            ><i class="fa-solid fa-user"></i> <span class="text">Profile</span></a
+            ><i class="fa-solid fa-user"></i>
+            <span class="text">Profile</span></a
           >
         </li>
         <li>
           <a href="./contact.html" title="Contact"
-            ><i class="fa-solid fa-message"></i> <span class="text">Contact</span></a
+            ><i class="fa-solid fa-message"></i>
+            <span class="text">Contact</span></a
           >
         </li>
       </ul>
     </section>
-  <form id="myForm">
-    <main class="contact">
-        <div class="name" style="color: rgb(45, 135, 238); font-size: large;">Name</div>
-        <div class="name1">
-          <input type="name" id="name" name="name" placeholder="Jane Doe" style="width: 500px; height: 50px; padding: 10px;">
+    <form id="myForm">
+      <main class="contact">
+        <div class="name" style="color: rgb(45, 135, 238); font-size: large">
+          Name
         </div>
-        <div class="email" style="color: rgb(45, 135, 238); font-size: large;">Email address</div>
-        <div class="email1">
-          <input type="email" id="email" name="email" placeholder="jane.doe@example.com" style="width: 500px; height: 50px; padding: 10px;">
+        <input
+          type="name"
+          id="name"
+          name="name"
+          placeholder="Jane Doe"
+          required
+          style="width: 500px; height: 50px; padding: 10px"
+        />
+        <div class="email" style="color: rgb(45, 135, 238); font-size: large">
+          Email address
         </div>
-        <div class="bd" style="color: rgb(45, 135, 238); font-size: large;">Birthday</div>
-        <div class="bd1">
-          <input type="date" id="date" name="date" style="width: 500px; height: 50px; padding: 10px;">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="jane.doe@example.com"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          style="width: 500px; height: 50px; padding: 10px"
+        />
+        <div class="bd" style="color: rgb(45, 135, 238); font-size: large">
+          Birthday
         </div>
-        <div class="liking" style="color: rgb(45, 135, 238); font-size: large;">
+        <input
+          type="date"
+          id="date"
+          name="date"
+          min="1900-01-01"
+          max="3000-01-01"
+          style="width: 500px; height: 50px; padding: 10px"
+        />
+        <!-- max needs js / ts to get todays date (not allowed rn) -->
+
+        <div class="liking" style="color: rgb(45, 135, 238); font-size: large">
           What do you like the most?
         </div>
-          <div class="options">
-            <div class="option">
-              <input type="radio" id="js" name="preference" value="JS">
-              <label for="js">JS</label>
-            </div>
-            <div class="option">
-              <input type="radio" id="html" name="preference" value="HTML">
-              <label for="html">HTML</label>
-            </div>
-            <div class="option">
-              <input type="radio" id="css" name="preference" value="CSS">
-              <label for="css">CSS</label>
-            </div>
-            <div class="option">
-              <input type="radio" id="undecided" name="preference" value="undecided">
-              <label for="undecided">Cannot make a decision.</label>
-            </div>
+        <div class="options">
+          <div class="option">
+            <input type="radio" id="js" name="preference" value="JS" />
+            <label for="js">JS</label>
           </div>
-        
-        <div class="message" style="color: rgb(45, 135, 238); font-size: large;">Your message
-        </div>
-        <div class="message1">
-          <textarea id="message" name="message" placeholder="Enter your message here..." style="width: 500px; height: 200px; padding: 10px;"></textarea>
+          <div class="option">
+            <input type="radio" id="html" name="preference" value="HTML" />
+            <label for="html">HTML</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="css" name="preference" value="CSS" />
+            <label for="css">CSS</label>
+          </div>
+          <div class="option">
+            <input
+              required
+              type="radio"
+              id="undecided"
+              name="preference"
+              value="undecided"
+            />
+            <label for="undecided">Cannot make a decision.</label>
+          </div>
         </div>
 
+        <div class="message" style="color: rgb(45, 135, 238); font-size: large">
+          Your message
+        </div>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Enter your message here..."
+          style="width: 500px; height: 200px; padding: 10px"
+        ></textarea>
 
         <div class="question">
-          <input type="checkbox" id="html" name="preference" value="html">
-          <label for="html">Yes, I want to receive very important spam messages!</label>
+          <input type="checkbox" id="html" name="preference" value="html" />
+          <label for="html"
+            >Yes, I want to receive very important spam messages!</label
+          >
         </div>
         <div class="button-group">
-          <button type="button" class="send-button" onclick="sendForm()" style="width: 100px; height: 40px;">Send</button>
-          <button type="reset" class="reset-button" style="width: 100px; height: 40px;">Reset</button>
-      </div>
-    </main>
-  </form>
+          <button
+            type="button"
+            class="send-button"
+            onclick="sendForm()"
+            style="width: 100px; height: 40px"
+          >
+            Send
+          </button>
+          <button
+            type="reset"
+            class="reset-button"
+            style="width: 100px; height: 40px"
+          >
+            Reset
+          </button>
+        </div>
+      </main>
+    </form>
     <script>
       function sendForm() {
-          // Simulate form submission
-          // Optionally reset the form after submission
-          document.getElementById('myForm').reset();
+        // Simulate form submission
+        // Optionally reset the form after submission
+        document.getElementById("myForm").reset();
       }
     </script>
     <footer>

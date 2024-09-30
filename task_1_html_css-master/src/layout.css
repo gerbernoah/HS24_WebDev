@@ -6,7 +6,7 @@ body {
   display: grid; /* Warum ist diese scheisse so shit */
   grid-template-columns: 200px 1fr; /* 250px for sidebar, 1px for divider, rest for content */
   grid-template-rows: auto 1fr auto; /* Header, main content, and footer */
-  grid-template-areas: 
+  grid-template-areas:
     "sidebar header"
     "sidebar main"
     "footer footer"; /* Define the layout areas */
@@ -16,7 +16,6 @@ body {
 }
 
 body > section {
-  
   grid-area: sidebar; /* Assign to the sidebar area */
   background-color: white;
 }
@@ -27,7 +26,7 @@ body section > ul {
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  
+
   & li > a {
     color: #999;
     font-size: 13px;
@@ -37,13 +36,12 @@ body section > ul {
     color: black;
   }
 }
-  
 
 @media screen and (max-width: 768px) {
   /* Make sidebar narrower */
   body > section {
     width: 100%; /* Adjust the width of the sidebar */
-    & ul{
+    & ul {
       padding: 0px;
       align-items: center;
     }
@@ -59,7 +57,6 @@ body section > ul {
   }
 }
 
-
 body > header {
   display: flex;
   align-items: center;
@@ -69,12 +66,11 @@ body > header {
     font-size: 1.75rem;
     flex-grow: 1;
   }
-  & span{
+  & span {
     padding: 15px;
   }
   background-color: white;
 }
-
 
 body > main {
   grid-area: main;
@@ -89,15 +85,15 @@ body > main {
   background-color: white;
 }
 
-main.contact{
+main.contact {
   display: grid; /* Warum ist diese scheisse so shit */
   grid-template-columns: 250px 1fr;
   grid-template-rows: 50px 50px 50px 110px 200px 20px 1fr;
   background-color: white;
   height: 100% /*calc(100vh - 100px)*/;
   padding: 15px; /* Padding inside the main container */
-  gap: 15px; /* Space between items */  
-  grid-template-areas: 
+  gap: 15px; /* Space between items */
+  grid-template-areas:
     "name name1"
     "email email1"
     "birthday birthday1"
@@ -105,94 +101,92 @@ main.contact{
     "mess mess1"
     "question question1" /* Define the layout areas */
     "unsend send";
-    .name{
-      grid-area: name;
-      text-align: start;
-      padding-left: 25px;
-    }
-    .name1{
-      grid-area: name1;
-      text-align: start; 
-    }
-    .bd{
-      grid-area: birthday;
-      text-align: start;
-      padding-left: 25px;
-    }
-    .bd1{
-      grid-area: birthday1;
-      text-align: start;
-    }
-    .email{
-      grid-area: email;
-      text-align: start;
-      padding-left: 25px;
-    }
-    .email1{
-      grid-area: email1;
-      text-align: start;
-    }
-    .liking{
-      grid-area: what;
-      text-align: start;
-      padding-left: 25px;
-    }
-    .message{
-      grid-area: mess;
-      text-align: start;
-      padding-left: 25px;
-    }
-    .message1{
-      grid-area: mess1;
-      text-align: start;
-      
-    }
-    .question{
-      grid-area: question1;
-      text-align: start;
+  .name {
+    grid-area: name;
+    text-align: start;
+    padding-left: 25px;
+  }
+  .name1 {
+    grid-area: name1;
+    text-align: start;
+  }
+  .bd {
+    grid-area: birthday;
+    text-align: start;
+    padding-left: 25px;
+  }
+  .bd1 {
+    grid-area: birthday1;
+    text-align: start;
+  }
+  .email {
+    grid-area: email;
+    text-align: start;
+    padding-left: 25px;
+  }
+  .email1 {
+    grid-area: email1;
+    text-align: start;
+  }
+  .liking {
+    grid-area: what;
+    text-align: start;
+    padding-left: 25px;
+  }
+  .message {
+    grid-area: mess;
+    text-align: start;
+    padding-left: 25px;
+  }
+  .message1 {
+    grid-area: mess1;
+    text-align: start;
+  }
+  .question {
+    grid-area: question1;
+    text-align: start;
+  }
+
+  .options {
+    grid-area: what1;
+    gap: 20px;
+
+    text-align: center;
+    .option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
     }
 
-    .options {
-      grid-area: what1;
-      gap: 20px;
-      
-      text-align: center;
-      .option {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-
-      .option input[type="radio"] {
-        margin-right: 10px; /* Space between checkbox and label */
-        
-      }
-      
-      .option label {
-        font-size: 16px; /* Font size for the labels */
-        cursor: pointer;
-      }
+    .option input[type="radio"] {
+      margin-right: 10px; /* Space between checkbox and label */
     }
 
-    .button-group{
-      grid-area: send;
-      align-items: start;
+    .option label {
+      font-size: 16px; /* Font size for the labels */
+      cursor: pointer;
     }
+  }
+
+  .button-group {
+    grid-area: send;
+    align-items: start;
+  }
 }
 
 /* Assuming the flex items are articles inside main */
 body > main article header,
-body > main article main{
+body > main article main {
   box-sizing: border-box; /* Include padding in the total size */
   flex: 1 1 200px; /* Grow, shrink, and set min-width */
   /*margin: 5px; /* Space between items */
 }
 
-.other{
+.other {
   padding: 20px; /* Space inside each flex item */
 }
 
-body > main article header a{
+body > main article header a {
   text-decoration: none;
 }
 

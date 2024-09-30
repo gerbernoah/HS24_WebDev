@@ -10,6 +10,8 @@
     <script src="./main.ts" type="module"></script>
   </head>
   <body>
+
+    <div class="container">
     <header>
       <h1>Contact</h1>
     </header>
@@ -124,24 +126,11 @@
           >
         </div>
         <div class="button-group">
-          <button
-            type="button"
-            class="send-button"
-            onclick="sendForm()"
-            style="width: 100px; height: 40px"
-          >
-            Send
-          </button>
-          <button
-            type="reset"
-            class="reset-button"
-            style="width: 100px; height: 40px"
-          >
-            Reset
-          </button>
-        </div>
-      </main>
-    </form>
+          <button type="button" class="send-button" onclick="sendForm()" style="width: 100px; height: 40px;">Send</button>
+          <button type="reset" class="reset-button" style="width: 100px; height: 40px;">Reset</button>
+      </div>
+    </main>
+  </form>
     <script>
       function sendForm() {
         // Simulate form submission
@@ -152,5 +141,6 @@
     <footer>
       <div>Made with <i class="fa-solid fa-heart"></i> by David Sichau</div>
     </footer>
+  </div>
   </body>
 </html>

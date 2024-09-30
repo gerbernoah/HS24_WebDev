@@ -10,40 +10,45 @@
     <script src="./main.ts" type="module"></script>
   </head>
   <body>
-    <header>
-      <h1 style="display: inline">Open data explorer</h1>
-      <span><i class="fa fa-solid fa-user"></i></span>
-      <i class="fa fa-solid fa-bars"></i>
-    </header>
+    <!-- Checkbox to toggle sidebar -->
+    <input type="checkbox" id="sidebar-toggle">
     
-    <section>
-      <ul>
-        <li>
-          <a href="/" title="Home">
-            <i class="fa-solid fa-home"></i> 
-            <span class="text">Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="/" title="Dashboard">
-            <i class="fa-solid fa-dashboard"></i> 
-            <span class="text">Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="/" title="Profile">
-            <i class="fa-solid fa-user"></i> 
-            <span class="text">Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="./contact.html" title="Contact">
-            <i class="fa-solid fa-message"></i>
-            <span class="text">Contact</span>
-          </a>
-        </li>
-      </ul>
-    </section>
+    <div class="container">
+        <header>
+            <h1 style="display: inline">Open data explorer</h1>
+            <i class="fas fa-user"></i>
+            <label for="sidebar-toggle"><i class="fas fa-bars"></i></label>
+        </header>
+
+        <!-- Sidebar -->
+        <section>
+            <ul>
+                <li>
+                    <a href="/" title="Home">
+                        <i class="fa-solid fa-home"></i>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" title="Dashboard">
+                        <i class="fa-solid fa-dashboard"></i>
+                        <span class="text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/" title="Profile">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./contact.html" title="Contact">
+                        <i class="fa-solid fa-message"></i>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
     <main>
       <article>
@@ -194,5 +199,6 @@
     <footer>
       <div>Made with <i class="fa-solid fa-heart"></i> by David Sichau</div>
     </footer>
+    </div>
   </body>
 </html>

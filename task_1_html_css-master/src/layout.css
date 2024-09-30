@@ -127,7 +127,7 @@ body .container main.contact{
   grid-area: main;
   /* Warum ist diese scheisse so ass */
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: auto 1fr;
   background-color: white;
   padding: 15px; /* Padding inside the main container */
   height: calc(100vh - 168.69px);
@@ -157,7 +157,7 @@ body .container main.contact{
     padding-left: 25px;
   }
   .bd1 {
-    grid-area: birthday1;
+    grid-area: email1;
     text-align: start;
   }
   .email {
@@ -166,7 +166,7 @@ body .container main.contact{
     padding-left: 25px;
   }
   .email1 {
-    grid-area: email1;
+    grid-area: birthday1;
     text-align: start;
   }
   .liking {
@@ -196,14 +196,11 @@ body .container main.contact{
     .option {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .option input[type="radio"] {
-      margin-right: 10px; /* Space between checkbox and label */
+      padding-bottom: 10px;
     }
 
     .option label {
+      padding-left: 10px;
       font-size: 16px; /* Font size for the labels */
       cursor: pointer;
     }
@@ -215,27 +212,31 @@ body .container main.contact{
   }
 }
 
-
-
 @media screen and (max-width: 997px) {
   body .container main.contact {
-    display: flex;
-    flex-direction: column;
+    display: grid;
 
-    .name {
-      padding-left: 0px;
-    }
-    .bd {
-      padding-left: 0px;
-    }
-    .email {
-      padding-left: 0px;
-    }
-    .liking {
-      padding-left: 0px;
-    }
+    grid-template-areas:
+    "name" "name1"
+    "email" "email1"
+    "birthday" "birthday1"
+    "what" "what1"
+    "mess" "mess1"
+    "question" "question1" /* Define the layout areas */
+    "send";
+
+    .name,
+    .bd,
+    .email,
+    .liking,
     .message {
       padding-left: 0px;
+      padding-top: 2vh;
+
+    }
+
+    .options{
+      padding-top: 2vh;
     }
   }
 }
@@ -244,7 +245,6 @@ body > .container main article header,
 body > .container main article main {
   box-sizing: border-box; /* Include padding in the total size */
   flex: 1 1 200px; /* Grow, shrink, and set min-width */
-  /*margin: 5px; /* Space between items */
 }
 
 .other {

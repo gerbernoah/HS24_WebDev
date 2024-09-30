@@ -45,20 +45,32 @@
     </section>
     <form id="myForm">
       <main class="contact">
-        <div class="name" style="color: rgb(45, 135, 238); font-size: large">
+        <style>
+          input::placeholder{
+            font-size: 1vw;
+          }
+          textarea::placeholder{
+            font-size: 1vw;
+          }
+          input[type="date"]{
+            font-size: 1vw;
+          }
+        </style>
+        <div class="name" style="color: rgb(45, 135, 238); font-size: 1vw">
           Name
         </div>
+        <div class="name1">
         <input
           type="name"
           id="name"
           name="name"
           placeholder="Jane Doe"
           required
-          style="width: 500px; height: 50px; padding: 10px"
-        />
-        <div class="email" style="color: rgb(45, 135, 238); font-size: large">
+          style="width: 30vw; height: 5vh; padding: 10px"
+        /></div>
+        <div class="email" style="color: rgb(45, 135, 238); font-size: 1vw">
           Email address
-        </div>
+        </div><div class="bd1">
         <input
           type="email"
           id="email"
@@ -66,36 +78,36 @@
           placeholder="jane.doe@example.com"
           required
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-          style="width: 500px; height: 50px; padding: 10px"
-        />
-        <div class="bd" style="color: rgb(45, 135, 238); font-size: large">
+          style="width: 30vw; height: 5vh; padding: 10px"
+        /></div>
+        <div class="bd" style="color: rgb(45, 135, 238); font-size: 1vw">
           Birthday
-        </div>
+        </div><div class="email1">
         <input
           type="date"
           id="date"
           name="date"
           min="1900-01-01"
           max="3000-01-01"
-          style="width: 500px; height: 50px; padding: 10px"
-        />
+          style="width: 30vw; height: 5vh; padding: 10px"
+        /></div>
         <!-- max needs js / ts to get todays date (not allowed rn) -->
 
-        <div class="liking" style="color: rgb(45, 135, 238); font-size: large">
+        <div class="liking" style="color: rgb(45, 135, 238); font-size: 1vw">
           What do you like the most?
         </div>
         <div class="options">
           <div class="option">
             <input type="radio" id="js" name="preference" value="JS" />
-            <label for="js">JS</label>
+            <label for="js" style="font-size: 1vw;">JS</label>
           </div>
           <div class="option">
             <input type="radio" id="html" name="preference" value="HTML" />
-            <label for="html">HTML</label>
+            <label for="html" style="font-size: 1vw;">HTML</label>
           </div>
           <div class="option">
             <input type="radio" id="css" name="preference" value="CSS" />
-            <label for="css">CSS</label>
+            <label for="css" style="font-size: 1vw;">CSS</label>
           </div>
           <div class="option">
             <input
@@ -105,29 +117,29 @@
               name="preference"
               value="undecided"
             />
-            <label for="undecided">Cannot make a decision.</label>
+            <label for="undecided" style="font-size: 1vw;">Cannot make a decision.</label>
           </div>
         </div>
 
-        <div class="message" style="color: rgb(45, 135, 238); font-size: large">
+        <div class="message" style="color: rgb(45, 135, 238); font-size: 1vw">
           Your message
-        </div>
+        </div> <div class="message1">
         <textarea
           id="message"
           name="message"
           placeholder="Enter your message here..."
-          style="width: 500px; height: 200px; padding: 10px"
-        ></textarea>
+          style="width: 30vw; height: 20vh; padding: 10px"
+        ></textarea></div>
 
         <div class="question">
           <input type="checkbox" id="html" name="preference" value="html" />
           <label for="html"
-            >Yes, I want to receive very important spam messages!</label
+            style="font-size: 1vw;">Yes, I want to receive very important spam messages!</label
           >
         </div>
         <div class="button-group">
-          <button type="submit" class="send-button" style="width: 100px; height: 40px;">Send</button>
-          <button type="reset" class="reset-button" style="width: 100px; height: 40px;">Reset</button>
+          <button type="submit" class="send-button" style="width: 5vw; height: 4vh; font-size: 1vw;">Send</button>
+          <button type="reset" class="reset-button" style="width: 5vw; height: 4vh; font-size: 1vw;">Reset</button>
       </div>
     </main>
   </form>

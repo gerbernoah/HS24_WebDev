@@ -210,6 +210,20 @@ body .container main.contact{
     grid-area: send;
     align-items: start;
   }
+
+  input::placeholder{
+    font-size: 1vw;
+  }
+  textarea::placeholder{
+    font-size: 1vw;
+  }
+  input[type="date"]{
+    font-size: 1vw;
+  }
+
+  .input-descripion {
+    color: rgb(45, 135, 238); font-size: 1vw
+  }
 }
 
 @media screen and (max-width: 997px) {

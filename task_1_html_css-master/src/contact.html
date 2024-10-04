@@ -10,131 +10,142 @@
     <script src="./main.ts" type="module"></script>
   </head>
   <body>
-
     <div class="container">
-    <header>
-      <h1>Contact</h1>
-    </header>
+      <header>
+        <h1>Contact</h1>
+      </header>
 
-    <section>
-      <ul>
-        <li>
-          <a href="/" title="Home"
-            ><i class="fa-solid fa-home"></i> <span class="text">Home</span></a
-          >
-        </li>
-        <li>
-          <a href="/" title="Dashboard"
-            ><i class="fa-solid fa-dashboard"></i>
-            <span class="text">Dashboard</span></a
-          >
-        </li>
-        <li>
-          <a href="/" title="Profile"
-            ><i class="fa-solid fa-user"></i>
-            <span class="text">Profile</span></a
-          >
-        </li>
-        <li>
-          <a href="./contact.html" title="Contact"
-            ><i class="fa-solid fa-message"></i>
-            <span class="text">Contact</span></a
-          >
-        </li>
-      </ul>
-    </section>
-    <form id="myForm">
-      <main class="contact">
-        <div class="name input-descripion">
-          Name
-        </div>
-        <div class="name1">
-        <input
-          type="name"
-          id="name"
-          name="name"
-          placeholder="Jane Doe"
-          required
-          style="width: 30vw; height: 5vh; padding: 10px"
-        /></div>
-        <div class="email input-descripion">
-          Email address
-        </div><div class="bd1">
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="jane.doe@example.com"
-          required
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-          style="width: 30vw; height: 5vh; padding: 10px"
-        /></div>
-        <div class="bd input-descripion">
-          Birthday
-        </div><div class="email1">
-        <input
-          type="date"
-          id="date"
-          name="date"
-          min="1900-01-01"
-          max="3000-01-01"
-          style="width: 30vw; height: 5vh; padding: 10px"
-        /></div>
-        <!-- max needs js / ts to get todays date (not allowed rn) -->
-
-        <div class="liking input-descripion">
-          What do you like the most?
-        </div>
-        <div class="options">
-          <div class="option">
-            <input type="radio" id="js" name="preference" value="JS" />
-            <label for="js" style="font-size: 1vw;">JS</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="html" name="preference" value="HTML" />
-            <label for="html" style="font-size: 1vw;">HTML</label>
-          </div>
-          <div class="option">
-            <input type="radio" id="css" name="preference" value="CSS" />
-            <label for="css" style="font-size: 1vw;">CSS</label>
-          </div>
-          <div class="option">
+      <section>
+        <ul>
+          <li>
+            <a href="/" title="Home"
+              ><i class="fa-solid fa-home"></i>
+              <span class="text">Home</span></a
+            >
+          </li>
+          <li>
+            <a href="/" title="Dashboard"
+              ><i class="fa-solid fa-dashboard"></i>
+              <span class="text">Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="/" title="Profile"
+              ><i class="fa-solid fa-user"></i>
+              <span class="text">Profile</span></a
+            >
+          </li>
+          <li>
+            <a href="./contact.html" title="Contact"
+              ><i class="fa-solid fa-message"></i>
+              <span class="text">Contact</span></a
+            >
+          </li>
+        </ul>
+      </section>
+      <form id="myForm">
+        <main class="contact">
+          <div class="name input-descripion">Name</div>
+          <div class="name1">
             <input
+              type="name"
+              id="name"
+              name="name"
+              placeholder="Jane Doe"
               required
-              type="radio"
-              id="undecided"
-              name="preference"
-              value="undecided"
+              style="width: 30vw; height: 5vh; padding: 10px"
             />
-            <label for="undecided" style="font-size: 1vw;">Cannot make a decision.</label>
           </div>
-        </div>
+          <div class="email input-descripion">Email address</div>
+          <div class="bd1">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="jane.doe@example.com"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              style="width: 30vw; height: 5vh; padding: 10px"
+            />
+          </div>
+          <div class="bd input-descripion">Birthday</div>
+          <div class="email1">
+            <input
+              type="date"
+              id="date"
+              name="date"
+              min="1900-01-01"
+              max="3000-01-01"
+              style="width: 30vw; height: 5vh; padding: 10px"
+            />
+          </div>
+          <!-- max needs js / ts to get todays date (not allowed rn) -->
 
-        <div class="message input-descripion">
-          Your message
-        </div> <div class="message1">
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Enter your message here..."
-          style="width: 30vw; height: 20vh; padding: 10px"
-        ></textarea></div>
+          <div class="liking input-descripion">What do you like the most?</div>
+          <div class="options">
+            <div class="option">
+              <input type="radio" id="js" name="preference" value="JS" />
+              <label for="js" style="font-size: 1vw">JS</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="html" name="preference" value="HTML" />
+              <label for="html" style="font-size: 1vw">HTML</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="css" name="preference" value="CSS" />
+              <label for="css" style="font-size: 1vw">CSS</label>
+            </div>
+            <div class="option">
+              <input
+                required
+                type="radio"
+                id="undecided"
+                name="preference"
+                value="undecided"
+              />
+              <label for="undecided" style="font-size: 1vw"
+                >Cannot make a decision.</label
+              >
+            </div>
+          </div>
 
-        <div class="question">
-          <input type="checkbox" id="html" name="preference" value="html" />
-          <label for="html"
-            style="font-size: 1vw;">Yes, I want to receive very important spam messages!</label
-          >
-        </div>
-        <div class="button-group">
-          <button type="submit" class="send-button" style="width: 5vw; height: 4vh; font-size: 1vw;">Send</button>
-          <button type="reset" class="reset-button" style="width: 5vw; height: 4vh; font-size: 1vw;">Reset</button>
-      </div>
-    </main>
-  </form>
-    <footer>
-      <div>Made with <i class="fa-solid fa-heart"></i> by David Sichau</div>
-    </footer>
-  </div>
+          <div class="message input-descripion">Your message</div>
+          <div class="message1">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message here..."
+              style="width: 30vw; height: 20vh; padding: 10px"
+            ></textarea>
+          </div>
+
+          <div class="question">
+            <input type="checkbox" id="html" name="preference" value="html" />
+            <label for="html" style="font-size: 1vw"
+              >Yes, I want to receive very important spam messages!</label
+            >
+          </div>
+          <div class="button-group">
+            <button
+              type="submit"
+              class="send-button"
+              style="width: 5vw; height: 4vh; font-size: 1vw"
+            >
+              Send
+            </button>
+            <button
+              type="reset"
+              class="reset-button"
+              style="width: 5vw; height: 4vh; font-size: 1vw"
+            >
+              Reset
+            </button>
+          </div>
+        </main>
+      </form>
+      <footer>
+        <div>Made with <i class="fa-solid fa-heart"></i> by David Sichau</div>
+      </footer>
+    </div>
   </body>
 </html>
